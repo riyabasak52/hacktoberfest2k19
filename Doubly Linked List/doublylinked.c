@@ -1,6 +1,4 @@
-#include "stdio.h"
-#include "conio.h"
-#include "iostream.h"
+#include<iostream>
 using namespace std;
 int insertdata(int x);
 void display();
@@ -10,6 +8,10 @@ int searchint(int x);
 int compare_fn(int a,int b)
 {
     //Write the compare function for the variables 'a' and 'b' and return the value
+	if(a==b){
+		return 1;
+	}
+	else return 0;
 }
 
 int compare_no=1;
@@ -22,6 +24,7 @@ struct node
 };
 
 //A missing line here which initialises the top condition.
+node *top=NULL;
 
 int main()
 {
@@ -72,6 +75,13 @@ int insertdata(int x)
     if(top==NULL)
     {
         //Write a code for this particular condition where TOP == NULL
+        struct node* newnode = (struct node*) malloc(sizeof(struct node)); 
+   	newnode->data  = x; 
+   	newnode->prev = NULL; 
+   	newnode->next = top;     
+   	if(top !=  NULL) 
+      		top->prev = newnode ;     
+   	top = newnode; 
     }
     else if(compare_fn(top->data ,x)==compare_no)
     {
@@ -93,6 +103,9 @@ int insertdata(int x)
 	    node *b=insertele->next;
 	    node *N =insertele;
 	    //Write 3 lines of code which links all the nodes in the linked list while inserting the data into the list.
+	    N->next=b;
+	    N->prev=insertele->prev;
+	    insertele->prev->next=N;
 	    if(b!=NULL)
 		b->prev=n;
     }
@@ -104,7 +117,7 @@ void display()
 	while(disp!=NULL)
 	{
 	    cout<<" "<<disp->data;
-	    if(_______)//write the particular condition for which the while condition needs to end
+	    if(disp->next==NULL)//write the particular condition for which the while condition needs to end
 	    {
 		break;
 	    }
@@ -117,7 +130,7 @@ void deleteint(int x)
     node *del=top;
     if(del->data == x)
     {
-        if(_______)// Write the condition for which TOP should be NULL while deleting a particular node in a doubly linked list.
+        if(*del==NULL)// Write the condition for which TOP should be NULL while deleting a particular node in a doubly linked list.
         {
             top=NULL;
             return;
@@ -154,7 +167,10 @@ void deleteint(int x)
 	    }
         }
         del->next=delsuc->next;
-        if(delsuc->next!=NULL)
+        if(delsuc->next!=NULL){
+		del->next=delsuc->next;
+		delsuc->next->prev=del;
+	}
       		//Write the step for which a doubly linked list needs to be connected after deleting an element from the list.			
     }
 }
