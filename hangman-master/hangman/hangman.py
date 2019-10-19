@@ -14,7 +14,7 @@ def hangman():
             x=movies[n]
             x.replace(" ","")
             if letter in x:
-                x.replace(letter,'')
+                 x.replace(letter,'')
                 print("Correct guess")
                 i+=1
                 print("Turns left: ",i)
