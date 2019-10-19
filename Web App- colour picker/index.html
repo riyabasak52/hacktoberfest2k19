@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Barriecito|Pacifico|Permanent+Marker|Satisfy&display=swap" rel="stylesheet">
+</head>
+<body id="main">
+	<div class="first_div">
+		
+		<h1 id="title">Survey Form</h1>
+		<p id="description">Sup.!<br>How much are you satisfied with your current life..?</p>
+		<form id="survey-form">
+			<div class="writing">
+				<label id="name-label">Your name? <input type="text" id="name" value="" placeholder="Enter Your Name" name=""  required></label><br>
+				<label id="email-label">Mail ID : <input type="email" id="email" value="" placeholder="Enter Your Email Id" name=""  required></label><br>
+				<label id="number-label">Wbt Your Age? <input type="number" id="number" name="age" value="" placeholder="Don't be shy ;)"  min="1" max="150"></label><br>
+				Not Discriminating but.. you are a.. <br>
+					<label for="male"><input id="male" type="radio" name="gender" value="male">Male</label>
+					<label for="female"><input id="female" type="radio" name="gender" value="female">Female</label>
+					<label for="others"><input id="others" type="radio" name="gender" value="others">Others</label>
+				<br>
+				<span id="life">Best word to describe ur current life :</span><br>
+					<label for="sucks"><input id="sucks" type="radio" name="life" value="sucks">Sucks</label>
+					<label for="average"><input id="average" type="radio" name="life" value="average">Average</label>
+					<label for="good"><input id="good" type="radio" name="life" value="good">Good</label>
+					<label for="best"><input id="best" type="radio" name="life" value="best">At its Best!</label>
+				<br>
+				<label id="dropdown">How Abt ur current occupation?<select name="status">
+					<option value="free">Jobless</option>
+					<option value="schooling">School</option>
+					<option value="college">College</option>				
+					<option value="job">Job</option>
+					<option value="retired">Retired</option>	
+				</select></label><br>
+				If i were a genie(!) what would u wish for?<br>
+					<label><input type="checkbox" name="a" value="Food">Food &nbsp </label>
+					<label><input type="checkbox" name="a" value="job">Job &nbsp</label>
+					<label><input type="checkbox" name="a" value="love">Love &nbsp</label>
+					<label><input type="checkbox" name="a" value="money">Money &nbsp</label>
+					<label><input type="checkbox" name="a" value="friend">True Friend</label>			
+				<br>
+				Nything unsaid?<textarea rows="3" cols="30" id="textarea" name="text"></textarea><br>
+				<input type="submit" name="">
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

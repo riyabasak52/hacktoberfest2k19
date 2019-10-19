@@ -1,0 +1,57 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#title{
+	font-family: 'Barriecito', cursive;
+	color: rgb(222, 222, 11);
+	letter-spacing: 2px;
+	font-size: 50px;
+}
+.first_div{
+background-image: url("https://fh-sites.imgix.net/sites/1026/2016/09/13190202/Proud-man-raising-a-flag-on-the-peak-of-the-mountain.-Successful-challenge-concept-new-achievement.jpg?auto=compress%2Cformat&w=1000&h=1000&fit=max");
+background-repeat: no-repeat;
+background-size: 100% 100vh;
+height: 100vh;
+padding-top: 5px;
+}
+#description{
+	font-family: 'Permanent Marker', cursive;
+	font-size: 30px;
+	padding-top: 30px;
+}
+#survey-form{
+	background-color: rgba(0,0,0,0.3);
+	height: 350px;
+}
+#survey-form{
+	line-height: 25px;
+	font-family: 'Satisfy', cursive;
+	/*letter-spacing: 2px;*/
+	padding-top: 10px;
+	/*font-family: 'Permanent Marker', cursive;*/
+	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	font-family: 'Just Another Hand', cursive;
+}
+.writing{
+	margin-left: 10px;
+}
+#number{
+	width: 150px;
+}
+#life{
+	font-size: 20px;
+}
+
+#textarea{
+	position: relative;
+	top: 28px;
+}
+@media only screen and (max-height: 200px){
+	.first_div{
+		height: 100%;
+		background-size: cover;
+		
+	}
+}
