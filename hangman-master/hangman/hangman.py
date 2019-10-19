@@ -1,9 +1,6 @@
 import random
 def hangman():
-    #opened_file = open('movies.txt','r')
     movie=["The Avengers","Captain America: Civil War","Aquaman","Thor","Madagascar","Ice Age","Real Steel","Joker"]
-    #read_file = read(opened_file)
-    #movie = list(opened_file)
     turns=10
     guesses=[]
     for i in range(turns,0,-1):
@@ -29,6 +26,3 @@ def hangman():
         
 hangman()
 print("While you may or may not have won in the game, you will always be a loser in life")
-        
-
-        

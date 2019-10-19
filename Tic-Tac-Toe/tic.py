@@ -49,7 +49,7 @@ def btnClick(buttons):
         tkinter.messagebox.showinfo("Tic-Tac-Toe", "Button already Clicked!")
 
 def checkForWin():
-    if (button1['text'] == 'X' and button2['text'] == 'X' and button3['text'] == 'X' or):
+    if (button1['text'] == 'X' and button2['text'] == 'X' and button3['text'] == 'X'):
         disableButton()
         tkinter.messagebox.showinfo("Tic-Tac-Toe", pa)
 
