@@ -47,7 +47,7 @@ int incr(int x)
 }
 int decr(int x)
 {
-    x=x/2;
+    x=x-2;
     return x;
 }
 
