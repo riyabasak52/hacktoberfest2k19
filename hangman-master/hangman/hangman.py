@@ -1,17 +1,17 @@
 import random
 def hangman():
-    opened_file = open('movies.txt','r')
-
+    #opened_file = open('movies.txt','r')
+    movies=["The Avengers","Captain America: Civil War","Aquaman","Thor","Madagascar","Ice Age","Real Steel","Joker"]
     #read_file = read(opened_file)
-    movie = list(opened_file)
+    #movie = list(opened_file)
     turns=10
     guesses=[]
     for i in range(turns,0,-1):
-        n=random.randint(0,len(movie)-1)
+        n=random.randint(0,len(movies)-1)
         letter= input("Enter your guess \n")
         if letter not in guesses:
             guesses.append(letter)
-            x=movie[n]
+            x=movies[n]
             x.replace(" ","")
             if letter in x:
                 x.replace(letter,'')
@@ -25,7 +25,7 @@ def hangman():
             print("Wrong guess")
             print("Turns left: ",i)
             continue
-        
+    return
 hangman()
 print("While you may or may not have won in the game, you will always be a loser in life")
         
