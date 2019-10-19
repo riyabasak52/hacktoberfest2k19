@@ -11,8 +11,12 @@ Example: given list -> [1,2,3,4,5]
 
 nums = [3, 5, 2, 9, 101, 333, 4]
 
-while len(nums):
-    for i in range(len(nums)):
-        if i%2==0:
-            del nums[i]
-    print(nums)
+def remove_odd_element(input_list):
+    i=0
+    for element in input_list:
+        if i % 2 == 0:
+            pass
+        else:
+            input_list.remove(element)
+        i = i + 1
+

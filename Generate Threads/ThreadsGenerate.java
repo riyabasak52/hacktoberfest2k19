@@ -1,5 +1,5 @@
 import java.util.*;
-import java.lang.*
+import java.lang.*;
 
 
 class square implements Runnable
@@ -13,13 +13,19 @@ class square implements Runnable
     {
         System.out.println("Square of the number: "+(y*y));
         //Use Threads to start a thread to find the cube of the given number y
+        Thread t = new Thread (new cube(y));
+        t.start();
+
     }
 }
 
-class cube //Something missing in the code here related to interfaces
+class cube implements Runnable //Something missing in the code here related to interfaces
 {
     int y;
     //Use a constructor to assign the value of y
+    public cube( int x){
+        y=x;
+    }
     public void run()
     {
         System.out.println("Cube of the number: "+(y*y*y));
@@ -39,21 +45,24 @@ class generate implements Runnable
     }
 }
 
-public class p3b
+public class ThreadsGenerate
 {
     public static void main(String args[])
     {
-        for(int i=0;i<5;i++)
-        {
-            //Generate a number using Threads and start the given thread
         
         try{
-            sleep(1000); //Find the error in this given line
+            for(int i=0;i<5;i++)
+            {
+                //Generate a number using Threads and start the given thread
+                Thread obj = new Thread(new generate());
+                obj.start();
+                Thread.sleep(1000); //Find the error in this given line -- sleep should be prefixed by thread
+            }
         }
-        catch(Exception e)
+         catch(Exception e)
         {
             System.out.println(e);
         }
     }
-    }
 }
+

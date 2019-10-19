@@ -17,7 +17,7 @@ int main()
     {
         ptr3=&ptr1;
     }
-    if(**ptr3==var)
+    if(***ptr3==&var)
     {
         printf("you are correct");
     }
@@ -25,6 +25,6 @@ int main()
         printf("please try again\n");
     }
     
-    printf("the value of ptr3 is %d\n",**ptr3);
+    printf("the value of ptr3 is %d\n",***ptr3);
     return 0;
 }
