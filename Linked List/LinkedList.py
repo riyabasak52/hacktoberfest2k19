@@ -34,7 +34,7 @@ print('The linked list: ', end = '')
 a_llist.display()
 
 time.sleep(10)
-decision =input(pyfiglet.figlet_format('Do you wish to exit?',font='3-d'))
+r=pyfiglet.figlet_format('Do you wish to exit?',font='3-d')
+decision =input(r)
 if decision == 'YES' or 'y' or 'Yes' or 'yes':
     sys.exit()
-
