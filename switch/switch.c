@@ -19,13 +19,13 @@ int main()
     switch(num) {
         case 1: {
             int res;
-            res=incr(num);
+            res=incr(num)+1;
             printf("the incremented number is %d\n",res);
             break;
         }
         case 2:{
             int res;
-            res=decr(num);
+            res=decr(num)-1;
             printf("the decremented number is %d\n",res);
             break;
             
