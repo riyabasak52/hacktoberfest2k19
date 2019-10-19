@@ -9,11 +9,34 @@ luxurious_lamp_price = 52.15
 sales_tax = .088
 customer_one_total = 0
 customer_one_itemization = ""
-customer_one_total += customer_one_total + lovely_loveseat_price
-customer_one_itemization += customer_one_itemization + lovely_loveseat_description
-customer_one_total += customer_one_total + luxurious_lamp_price
-customer_one_itemization += customer_one_itemization + luxurious_lamp_description
-customer_one_tax = customer_one_total * sales_tax
-customer_one_total += customer_one_total + customer_one_tax
-print("Customer One Items: " , customer_one_itemization)
-print("Customer One Total: " , str(customer_one_total))
+item=0
+while(not(item==4)):
+  print("select item")
+  print("1.Lovely Loveseat 2.Stylish Settee 3.Luxurious lamp 4.Done")
+  item=input();
+  if item==1:
+    customer_one_total+=lovely_loveseat_price*(1+sales_tax)
+    customer_one_itemization += customer_one_itemization + lovely_loveseat_description
+    print("Customer One Items: " , customer_one_itemization)
+    print("Customer One Total: " , str(customer_one_total))
+  elif item==2: 
+    customer_one_total+=stylish_settee_price*(1+sales_tax)
+    customer_one_itemization += customer_one_itemization + stylish_settee_description
+    print("Customer One Items: " , customer_one_itemization)
+    print("Customer One Total: " , str(customer_one_total))
+  elif item==3: 
+    customer_one_total+=luxurious_lamp_price*(1+sales_tax)
+    customer_one_itemization += customer_one_itemization + luxurious_lamp_description
+    print("Customer One Items: " , customer_one_itemization)
+    print("Customer One Total: " , str(customer_one_total))
+    
+    
+
+#customer_one_total += customer_one_total + lovely_loveseat_price
+
+#customer_one_total += customer_one_total + luxurious_lamp_price
+
+#customer_one_tax = customer_one_total * sales_tax
+#customer_one_total += customer_one_total + customer_one_tax
+#print("Customer One Items: " , customer_one_itemization)
+#print("Customer One Total: " , str(customer_one_total))
