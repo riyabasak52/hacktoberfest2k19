@@ -57,7 +57,7 @@ public class p3b
             //Generate a number using Threads and start the given thread
         
         try{
-            Thread.sleep(1000); //Find the error in this given line//corrected
+            Thread.sleep(1000); //Find the error in this given line //corrected
         }
         catch(Exception e)
         {
