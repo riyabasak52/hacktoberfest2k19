@@ -27,22 +27,19 @@ def webaccess():#defining a function to access the website
         for script in soup(["script","style"]):
             script.extract()
         text=soup.get_text()
-        #print(text)
-        #lines=(line.strip() for line in text.splitlines())
         temp=text.split()
-        #print(temp)
         for x in word:
             count=0
             for y in temp:
                 if y not in density:
                     count=count+1
                     density.update({y:count})
-                    #print("Not Found ",y,count)
+                    print("Not Found ",y,count)
                 else:
                     count=density[y]
                     count=count+1
                     density.update({y:count})
-                    #print("Found ",y,count)
+                    print("Found ",y,count)
                     
         if word in density:
             print(density[word])
